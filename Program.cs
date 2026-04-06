@@ -27,6 +27,8 @@ builder.Services.AddScoped<OrderState>();
 
 var app = builder.Build();
 
+app.UseRequestLocalization("en-US");
+
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
