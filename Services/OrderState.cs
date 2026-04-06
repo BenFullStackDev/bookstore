@@ -26,6 +26,7 @@ public class OrderState
     public void ResetOrder() // After placing an order
     {
         Order = new Order();
+        Order.OrderItems = new List<OrderItem>();
         OnChange?.Invoke();
     }
 }

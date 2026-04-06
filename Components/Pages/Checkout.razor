@@ -39,6 +39,8 @@
 
         context.Orders.Attach(Order);
         await context.SaveChangesAsync();
+        
+        OrderState.ResetOrder();
 
         NavigationManager.NavigateTo("/");
     }
